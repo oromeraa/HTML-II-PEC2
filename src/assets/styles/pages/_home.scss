@@ -98,10 +98,11 @@
   &__title {
     font-weight: 900;
     font-size: clamp(2.5rem, 8cqi, 5rem);
-    line-height: 1.05;
+    line-height: 2.3;
     color: #fff;
     text-shadow: 0 2px 12px oklch(5% 0.06 250 / 0.7);
     margin-bottom: 0.75rem;
+    font-family: $font-display;
   }
 
   &__subtitle {

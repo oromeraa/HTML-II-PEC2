@@ -3,7 +3,7 @@
  * Do not include SCSS code in this file.
  */
 
-@layer reset, bootstrap, base, views, components, pages, utilities;
+@layer reset, bootstrap, base, layout, views, components, pages, utilities;
 
 @layer reset {
   @import "base/reset";

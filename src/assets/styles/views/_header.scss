@@ -14,17 +14,21 @@
     width: 80%;
     margin: 0 auto;
     padding: 1rem 0;
+
+    &-nav {
+      gap: 2rem;
+    }
   }
 
   .nav-link {
     color: $sabero-black;
     font-weight: 600;
-    font-size: 1rem;
+    font-size: 1.5rem;
     transition: color 0.2s;
 
     &:hover,
     &:focus {
-      color: $sabero-gold;
+      color: $sabero-green;
     }
   }
 

@@ -1,0 +1,376 @@
+/*------------------------------------*\
+  # Article page
+\*------------------------------------*/
+
+@use "../abstracts/variables" as *;
+
+// ── Hero ──────────────────────────────────────────────────────────────────────
+
+.article {
+  &__hero {
+    position: relative;
+    margin-bottom: 3rem;
+
+    &-figure {
+      width: 100%;
+      height: 60vh;
+      min-height: 280px;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+    }
+
+    &-content {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      text-align: center;
+      padding: 4rem 1rem 2.5rem;
+      background: linear-gradient(to top, oklch(10% 0 250 / 0.8), transparent);
+
+      .article__title {
+        font-size: clamp(1.6rem, 4vw, 2.5rem);
+        color: #fff;
+        margin-bottom: 0.75rem;
+        line-height: 1.2;
+      }
+
+      .article__meta {
+        font-size: 0.95rem;
+        color: oklch(85% 0 230);
+      }
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    width: 80%;
+
+    margin: 0 auto;
+    padding: 0 1rem;
+
+    &-content {
+      max-width: 900px;
+
+      .article__intro {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 2rem;
+
+        &-tldr {
+          font-size: clamp(1.35rem, 2cqi, 1.5rem);
+          font-weight: 600;
+          color: $color-primary;
+          line-height: 1.5;
+        }
+
+        &-body {
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+        }
+      }
+
+      .article__blockquote-wrapper {
+        margin: 2.5rem 0;
+
+        .article__blockquote {
+          margin: 0;
+          padding: 0;
+          border: none;
+          background: none;
+
+          p {
+            font-size: clamp(1.3rem, 3cqi, 2rem);
+            line-height: 1.35;
+            color: oklch(20% 0.1 230);
+            margin: 0;
+          }
+        }
+
+        .article__blockquote-author {
+          display: block;
+          margin-top: 1rem;
+          font-size: 1rem;
+          color: oklch(45% 0 250);
+          font-weight: 500;
+        }
+      }
+
+      .article__divider {
+        border: none;
+        border-top: 1px solid $sabero-black;
+      }
+
+      .article__img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: $border-radius-card;
+        padding: 1rem 0;
+      }
+    }
+  }
+}
+
+// ── Página ────────────────────────────────────────────────────────────────────
+
+// .article-page {
+//   container-type: inline-size;
+//   container-name: article-page;
+//   background-color: #fff;
+//   padding-bottom: 5rem;
+// }
+
+// ── Artículo ──────────────────────────────────────────────────────────────────
+
+// .article {
+//   container-type: inline-size;
+//   container-name: article;
+
+//   // :is() — misma tipografía para todos los encabezados
+//   :is(h1, h2, h3, h4, h5, h6) {
+//     color: oklch(20% 0 250);
+//     line-height: 1.2;
+//   }
+
+//   // :where() — especificidad 0, fácil de sobrescribir
+//   :where(p, li) {
+//     font-size: 1.05rem;
+//     line-height: 1.75;
+//     color: oklch(25% 0 250);
+//   }
+
+//   :where(a) {
+//     color: $color-primary;
+//   }
+
+//   > p {
+//     margin-bottom: 1.5rem;
+//   }
+// }
+
+// // ── Intro: 1 col lead + 2 cols cuerpo ─────────────────────────────────────────
+
+// .article__intro {
+//   display: grid;
+//   grid-template-columns: 1fr 2fr;
+//   gap: 2.5rem;
+//   margin-bottom: 2rem;
+// }
+
+// .article__lead {
+//   font-size: clamp(1.35rem, 2cqi, 1.5rem);
+//   font-weight: 600;
+//   color: $color-primary;
+//   line-height: 1.5;
+//   margin: 0;
+// }
+
+// .article__intro-body {
+//   display: flex;
+//   flex-direction: column;
+//   gap: 1rem;
+
+//   p {
+//     margin: 0;
+//   }
+// }
+
+// // ── Separador ─────────────────────────────────────────────────────────────────
+
+// .article__divider {
+//   border: none;
+//   border-top: 1px solid $sabero-gold;
+// }
+
+// // ── Listas ────────────────────────────────────────────────────────────────────
+
+// .article__list {
+//   padding-left: 0;
+//   list-style: none;
+//   display: flex;
+//   flex-direction: column;
+//   gap: 1.25rem;
+//   margin-bottom: 1.75rem;
+
+//   li {
+//     padding-left: 2rem;
+//     position: relative;
+//   }
+// }
+
+// .article__list:not(.article__list--ordered) li::before {
+//   content: "";
+//   position: absolute;
+//   left: 0;
+//   top: 0.65em;
+//   width: 0.5rem;
+//   height: 0.5rem;
+//   border-radius: 50%;
+//   background-color: $color-primary;
+// }
+
+// .article__list--ordered {
+//   counter-reset: article-list;
+
+//   li {
+//     counter-increment: article-list;
+
+//     &::before {
+//       content: counter(article-list);
+//       position: absolute;
+//       left: 0;
+//       top: 0.05em;
+//       font-size: 1rem;
+//       font-weight: 700;
+//       color: $color-primary;
+//       line-height: 1.6;
+//     }
+//   }
+// }
+
+// .article__item-title {
+//   display: block;
+//   font-weight: 700;
+//   color: oklch(15% 0.1 250);
+//   margin-bottom: 0.25rem;
+// }
+
+// // ── Blockquote ────────────────────────────────────────────────────────────────
+
+// .article__blockquote-wrapper {
+//   margin: 2.5rem 0;
+// }
+
+// .article__blockquote {
+//   margin: 0;
+//   padding: 0;
+//   border: none;
+//   background: none;
+
+//   p {
+//     font-size: clamp(1.3rem, 3cqi, 2rem);
+//     line-height: 1.35;
+//     color: oklch(20% 0.1 230);
+//     margin: 0;
+//   }
+// }
+
+// .article__blockquote-source {
+//   display: block;
+//   margin-top: 1rem;
+//   font-size: 1rem;
+//   color: oklch(45% 0 250);
+//   font-weight: 500;
+// }
+
+// // ── Figuras ───────────────────────────────────────────────────────────────────
+
+// // :has(figcaption) — figura CON pie: enmarcada
+// .article__figure:has(figcaption) {
+//   border: 1px solid oklch(90% 0 250);
+//   border-radius: $border-radius-card;
+//   padding: 0.75rem 0.75rem 0;
+//   margin: 2rem 0;
+// }
+
+// // :not(:has(figcaption)) — figura SIN pie: 80% del viewport, centrada
+// .article__figure:not(:has(figcaption)) {
+//   width: 80vw;
+//   max-width: 100%;
+//   margin: 2.5rem auto;
+//   background-color: oklch(93% 0 240);
+//   padding: 2.5rem;
+//   border-radius: $border-radius-card;
+// }
+
+// .article__img {
+//   width: 100%;
+//   height: auto;
+//   display: block;
+//   border-radius: $border-radius-card;
+
+//   .article__figure:has(figcaption) & {
+//     border-radius: $border-radius-card $border-radius-card 0 0;
+//   }
+
+//   .article__figure:not(:has(figcaption)) & {
+//     max-width: 900px;
+//     margin: 0 auto;
+//   }
+// }
+
+// .article__figcaption {
+//   font-size: 0.85rem;
+//   color: oklch(50% 0 250);
+//   text-align: center;
+//   padding: 0.5rem 0.75rem 0.75rem;
+//   font-style: italic;
+// }
+
+// // ── Pie del artículo ──────────────────────────────────────────────────────────
+
+// .article__footer {
+//   margin-top: 3rem;
+//   padding-top: 1.5rem;
+//   border-top: 1px solid oklch(90% 0 250);
+//   display: flex;
+//   flex-wrap: wrap;
+//   align-items: center;
+//   justify-content: space-between;
+//   gap: 1rem;
+// }
+
+// .article__tags {
+//   display: flex;
+//   flex-wrap: wrap;
+//   gap: 0.4rem;
+// }
+
+// .article__share {
+//   display: flex;
+//   align-items: center;
+//   gap: 0.75rem;
+//   font-size: 1rem;
+
+//   a {
+//     color: oklch(40% 0.1 250);
+//     font-size: 1.1rem;
+//     text-decoration: none;
+//     transition: color 0.2s;
+
+//     &:hover {
+//       color: $color-primary;
+//     }
+//   }
+// }
+
+// // ── Container queries ─────────────────────────────────────────────────────────
+
+// @container article-page (width < 480px) {
+//   .article {
+//     padding: 0 0.5rem;
+//   }
+// }
+
+// @container article (width < 580px) {
+//   .article__intro {
+//     grid-template-columns: 1fr;
+//   }
+
+//   .article__figure:not(:has(figcaption)) {
+//     width: 100%;
+//     padding: 1.5rem 1rem;
+//   }
+// }

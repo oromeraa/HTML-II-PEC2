@@ -1,43 +1,137 @@
 <!doctype html>
 
-<html>
+<html lang="es">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss" />
     <!-- do not remove this line! -->
-    <title>Jornadas de Artesanía de Sabero</title>
+    <title>La jornada — Jornadas de Artesanía de Sabero</title>
   </head>
   <body>
     <include src="./views/header.html"></include>
-    <main>
-      <article>
-        <div class="hero-article">
-          <h1>La jornada</h1>
+
+    <main class="article">
+      <div class="article__hero">
+        <figure class="article__hero-figure">
+          <img
+            src="assets/images/hero-article.png"
+            alt="Vista del taller de artesanía de Sabero"
+            class="article__hero-img"
+          />
+        </figure>
+        <div class="article__hero-content">
+          <h1 class="article__title">
+            Muy lejos, más allá de las montañas de palabras
+          </h1>
+          <div class="article__meta">
+            <p class="article__author">por Omar Romera</p>
+          </div>
         </div>
-        <div class="article-content">
+      </div>
+
+      <div class="article__body">
+        <article class="article__body-content">
+          <div class="article__intro">
+            <p class="article__intro-tldr">
+              Muy lejos, más allá de las montañas de palabras, alejados de los
+              países de las vocales y las consonantes, viven los textos
+              simulados en casas de letras.
+            </p>
+            <div class="article__intro-body">
+              <p>
+                Un riachuelo llamado Pons fluye por su pueblo y los abastece con
+                las normas necesarias. Es un país paraisomático en el que a uno
+                le caen pedazos de frases asadas en la boca. Ni siquiera los
+                todopoderosos signos de puntuación dominan a los textos
+                simulados; una vida, se puede decir, poco ortográfica.
+              </p>
+              <p>
+                Pero un buen día una pequeña línea de texto simulado, llamada
+                Lorem Ipsum, decidió aventurarse y salir al vasto mundo de la
+                gramática. El gran Oxmox le desanconsejó hacerlo, ya que esas
+                tierras estaban llenas de comas malvadas y puntos y coma
+                traicioneros.
+              </p>
+            </div>
+          </div>
+
+          <hr class="article__divider" />
+
+          <ol class="article__list">
+            <li>
+              <strong class="article__item-title">Charlas magistrales</strong>
+              <p>
+                Cuando las montañas de palabras se alejan de las vocales y las
+                consonantes, los textos simulados encuentran su lugar entre
+                frases asadas y signos de puntuación domesticados.
+              </p>
+            </li>
+            <li>
+              <strong class="article__item-title">Talleres prácticos</strong>
+              <p>
+                El gran Oxmox advirtió que las tierras más allá del río Pons
+                estaban llenas de comas salvajes, pero los textos decidieron
+                emprender el viaje con sus siete versales y su inicial al
+                cinturón.
+              </p>
+            </li>
+            <li>
+              <strong class="article__item-title">Feria de artesanos</strong>
+              <p>
+                Separados vivían en Marcooksgrove, justo a la costa de la
+                semántica, un gran océano lingüístico. Una pregunta retórica se
+                le pasó por la mente y le puso melancólico.
+              </p>
+            </li>
+          </ol>
+
+          <hr class="article__divider" />
+
+          <figure class="article__blockquote-wrapper">
+            <blockquote class="article__blockquote">
+              <p>
+                Muy lejos, más allá de las montañas de palabras, alejados de los
+                países de las vocales y las consonantes, viven los textos
+                simulados. Viven aislados en casas de letras, en la costa de la
+                semántica, un gran océano de lenguas.
+              </p>
+            </blockquote>
+            <figcaption class="article__blockquote-author">
+              -- María López, ceramista y ponente invitada
+            </figcaption>
+          </figure>
+
           <p>
-            Las Jornadas de Artesanía de Sabero son un evento anual que celebra
-            la riqueza y diversidad de la artesanía local. Durante este evento,
-            los visitantes pueden disfrutar de una amplia variedad de actividades,
-            incluyendo talleres, demostraciones en vivo, exposiciones y
-            presentaciones de artesanos locales.
+            Empacó sus siete versales, enfundó su inicial en el cinturón y se
+            puso en camino. Cuando ya había escalado las primeras colinas de las
+            montañas cursivas, se dio media vuelta para dirigir su mirada por
+            última vez hacia su ciudad natal Letralandia.
           </p>
+
           <p>
-            El objetivo principal de las jornadas es promover el trabajo de los
-            artesanos locales y fomentar el interés por las técnicas tradicionales
-            de artesanía. Además, las jornadas buscan crear un espacio de encuentro
-            entre artesanos, amantes de la artesanía y el público en general, para
-            compartir conocimientos, experiencias y fomentar la colaboración.
+            Más adelante, cruzando el puente de las preposiciones, el texto
+            simulado divisó por fin las luces de la ciudad de los Caracteres,
+            donde dicen que ningún párrafo queda incompleto y cada frase halla
+            su punto final.
           </p>
+
+          <img
+            src="assets/images/articulo/taller-ceramica.jpg"
+            alt="Taller de cerámica en la edición anterior"
+            class="article__img"
+          />
+
           <p>
-            Cada año, las Jornadas de Artesanía de Sabero cuentan con una temática
-            diferente que guía las actividades y exposiciones del evento. Esta
-            temática puede estar relacionada con una técnica específica, un material
-            particular o una tradición artesanal concreta.
+            Viven aislados en casas de letras, en la costa de la semántica. Un
+            riachuelo llamado Pons fluye por su pueblo y los abastece con las
+            normas necesarias. Es un país paraisomático en el que a uno le caen
+            pedazos de frases asadas en la boca.
           </p>
-        </div>
+        </article>
+      </div>
     </main>
+
     <include src="./views/footer.html"></include>
     <script type="module" src="./assets/scripts/main.js"></script>
     <!-- do not remove this line! -->
