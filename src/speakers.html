@@ -1,85 +1,377 @@
 <!doctype html>
 
-<html>
+<html lang="es">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss" />
     <!-- do not remove this line! -->
-    <title>Jornadas de Artesanía de Sabero</title>
+    <title>Artesanos — Jornadas de Artesanía de Sabero</title>
   </head>
-  <body>
+  <body class="speakers">
     <include src="./views/header.html"></include>
-    <main>
-      <div class="hero-speakers">
-        <h1>Los artesanos</h1>
-      </div>
-      <div class="speakers-grid">
-        <div class="speaker-card">
-          <img
-            src="https://picsum.photos/id/64/200"
-            alt="Foto de Juan Pérez, artesano de cerámica"
-          />
-          <h3>Juan Pérez</h3>
-          <p>
-            Especialista en cerámica tradicional, con más de 20 años de
-            experiencia.
+
+    <main class="speakers-page">
+      <div class="container">
+        <div class="speakers-page__header">
+          <h1 class="speakers-page__title">Artesanos</h1>
+          <p class="speakers-page__intro">
+            Muy lejos, más allá de las montañas de palabras.
           </p>
         </div>
-        <div class="speaker-card">
-          <img
-            src="https://picsum.photos/id/64/200"
-            alt="Foto de María López, artesana de madera"
-          />
-          <h3>María López</h3>
-          <p>
-            Maestra carpintera, reconocida por su trabajo en muebles rústicos.
-          </p>
-        </div>
-        <div class="speaker-card">
-          <img
-            src="https://picsum.photos/id/64/200"
-            alt="Foto de Carlos García, artesano de cuero"
-          />
-          <h3>Carlos García</h3>
-          <p>
-            Artesano del cuero, conocido por sus bolsos y accesorios únicos.
-          </p>
-        </div>
-        <div class="speaker-card">
-          <img
-            src="https://picsum.photos/id/64/200"
-            alt="Foto de Ana Martínez, artesana de vidrio"
-          />
-          <h3>Ana Martínez</h3>
-          <p>
-            Vidriera experta, especializada en técnicas de soplado de vidrio.
-          </p>
-        </div>
-        <div class="speaker-card">
-          <img
-            src="https://picsum.photos/id/64/200"
-            alt="Foto de Pedro Rodríguez, artesano de metal"
-          />
-          <h3>Pedro Rodríguez</h3>
-          <p>
-            Forjador de metal, reconocido por sus esculturas y objetos
-            decorativos.
-          </p>
-        </div>
-        <div class="speaker-card">
-          <img
-            src="https://picsum.photos/id/64/200"
-            alt="Foto de Laura Sánchez, artesana de textil"
-          />
-          <h3>Laura Sánchez</h3>
-          <p>
-            Tejedora y diseñadora textil, especializada en técnicas
-            tradicionales.
-          </p>
+
+        <div class="speakers-grid">
+          <article class="speaker-card">
+            <figure class="speaker-card__figure">
+              <img
+                src="https://placeholdpicsum.dev/photo/id/665/400/400"
+                alt="Foto de María López"
+                class="speaker-card__photo"
+                loading="lazy"
+              />
+            </figure>
+            <div class="speaker-card__body">
+              <h2 class="speaker-card__name">María López</h2>
+              <p class="speaker-card__bio">
+                Muy lejos, más allá de las montañas de palabras, alejados de los
+                países de las vocales y las consonantes
+              </p>
+              <a
+                href="#"
+                class="btn btn-sm btn-outline-primary speaker-card__btn"
+                data-bs-toggle="modal"
+                data-bs-target="#modelArtista1"
+              >
+                Ver más
+              </a>
+            </div>
+          </article>
+
+          <article class="speaker-card">
+            <figure class="speaker-card__figure">
+              <img
+                src="https://placeholdpicsum.dev/photo/id/670/400/400"
+                alt="Foto de Jordi Mas"
+                class="speaker-card__photo"
+                loading="lazy"
+              />
+            </figure>
+            <div class="speaker-card__body">
+              <h2 class="speaker-card__name">Jordi Mas</h2>
+              <p class="speaker-card__bio">
+                Muy lejos, más allá de las montañas de palabras, alejados de los
+                países de las vocales y las consonantes
+              </p>
+              <a
+                href="#"
+                class="btn btn-sm btn-outline-primary speaker-card__btn"
+                data-bs-toggle="modal"
+                data-bs-target="#modelArtista2"
+              >
+                Ver más
+              </a>
+            </div>
+          </article>
+
+          <article class="speaker-card">
+            <figure class="speaker-card__figure">
+              <img
+                src="https://placeholdpicsum.dev/photo/id/664/400/400"
+                alt="Foto de Sara Puig"
+                class="speaker-card__photo"
+                loading="lazy"
+              />
+            </figure>
+            <div class="speaker-card__body">
+              <h2 class="speaker-card__name">Sara Puig</h2>
+              <p class="speaker-card__bio">
+                Muy lejos, más allá de las montañas de palabras, alejados de los
+                países de las vocales y las consonantes
+              </p>
+              <a
+                href="#"
+                class="btn btn-sm btn-outline-primary speaker-card__btn"
+                data-bs-toggle="modal"
+                data-bs-target="#modelArtista3"
+              >
+                Ver más
+              </a>
+            </div>
+          </article>
+
+          <article class="speaker-card">
+            <figure class="speaker-card__figure">
+              <img
+                src="https://placeholdpicsum.dev/photo/id/688/400/400"
+                alt="Foto de Àlex Ferrer"
+                class="speaker-card__photo"
+                loading="lazy"
+              />
+            </figure>
+            <div class="speaker-card__body">
+              <h2 class="speaker-card__name">Àlex Ferrer</h2>
+              <p class="speaker-card__bio">
+                Muy lejos, más allá de las montañas de palabras, alejados de los
+                países de las vocales y las consonantes
+              </p>
+              <a
+                href="#"
+                class="btn btn-sm btn-outline-primary speaker-card__btn"
+                data-bs-toggle="modal"
+                data-bs-target="#modelArtista4"
+              >
+                Ver más
+              </a>
+            </div>
+          </article>
+
+          <article class="speaker-card">
+            <figure class="speaker-card__figure">
+              <img
+                src="https://placeholdpicsum.dev/photo/id/667/400/400"
+                alt="Foto de Núria Vila"
+                class="speaker-card__photo"
+                loading="lazy"
+              />
+            </figure>
+            <div class="speaker-card__body">
+              <h2 class="speaker-card__name">Núria Vila</h2>
+              <p class="speaker-card__bio">
+                Muy lejos, más allá de las montañas de palabras, alejados de los
+                países de las vocales y las consonantes
+              </p>
+              <a
+                href="#"
+                class="btn btn-sm btn-outline-primary speaker-card__btn"
+                data-bs-toggle="modal"
+                data-bs-target="#modelArtista5"
+              >
+                Ver más
+              </a>
+            </div>
+          </article>
+
+          <article class="speaker-card">
+            <figure class="speaker-card__figure">
+              <img
+                src="https://placeholdpicsum.dev/photo/id/663/400/400"
+                alt="Foto de Pau Roca"
+                class="speaker-card__photo"
+                loading="lazy"
+              />
+            </figure>
+            <div class="speaker-card__body">
+              <h2 class="speaker-card__name">Pau Roca</h2>
+              <p class="speaker-card__bio">
+                Muy lejos, más allá de las montañas de palabras, alejados de los
+                países de las vocales y las consonantes
+              </p>
+              <a
+                href="#"
+                class="btn btn-sm btn-outline-primary speaker-card__btn"
+                data-bs-toggle="modal"
+                data-bs-target="#modelArtista6"
+              >
+                Ver más
+              </a>
+            </div>
+          </article>
         </div>
       </div>
     </main>
+
+    <div class="modal fade" id="modelArtista1" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title fs-5">María López</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <img
+              src="https://placeholdpicsum.dev/photo/id/665/600/400"
+              alt="María López"
+              class="img-fluid rounded mb-3"
+            />
+            <p>
+              Y, viéndole don Quijote de aquella manera, con muestras de tanta
+              tristeza, le dijo: Sábete, Sancho, que no es un hombre más que
+              otro si no hace más que otro.
+            </p>
+            <p>
+              Todas estas borrascas que nos suceden son señales de que presto ha
+              de serenar el tiempo y han de sucedernos bien las cosas; porque no
+              es posible que el mal ni el bien sean durables, y de aquí se sigue
+              que, habiendo durado mucho el mal, el bien está ya cerca.
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modelArtista2" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title fs-5">Jordi Mas</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <img
+              src="https://placeholdpicsum.dev/photo/id/670/600/400"
+              alt="Jordi Mas"
+              class="img-fluid rounded mb-3"
+            />
+            <p>
+              Y, viéndole don Quijote de aquella manera, con muestras de tanta
+              tristeza, le dijo: Sábete, Sancho, que no es un hombre más que
+              otro si no hace más que otro.
+            </p>
+            <p>
+              Todas estas borrascas que nos suceden son señales de que presto ha
+              de serenar el tiempo y han de sucedernos bien las cosas; porque no
+              es posible que el mal ni el bien sean durables, y de aquí se sigue
+              que, habiendo durado mucho el mal, el bien está ya cerca.
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modelArtista3" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title fs-5">Sara Puig</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <img
+              src="https://placeholdpicsum.dev/photo/id/664/600/400"
+              alt="Sara Puig"
+              class="img-fluid rounded mb-3"
+            />
+            <p>
+              Y, viéndole don Quijote de aquella manera, con muestras de tanta
+              tristeza, le dijo: Sábete, Sancho, que no es un hombre más que
+              otro si no hace más que otro.
+            </p>
+            <p>
+              Todas estas borrascas que nos suceden son señales de que presto ha
+              de serenar el tiempo y han de sucedernos bien las cosas; porque no
+              es posible que el mal ni el bien sean durables, y de aquí se sigue
+              que, habiendo durado mucho el mal, el bien está ya cerca.
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modelArtista4" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title fs-5">Àlex Ferrer</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <img
+              src="https://placeholdpicsum.dev/photo/id/688/600/400"
+              alt="Àlex Ferrer"
+              class="img-fluid rounded mb-3"
+            />
+            <p>
+              Y, viéndole don Quijote de aquella manera, con muestras de tanta
+              tristeza, le dijo: Sábete, Sancho, que no es un hombre más que
+              otro si no hace más que otro.
+            </p>
+            <p>
+              Todas estas borrascas que nos suceden son señales de que presto ha
+              de serenar el tiempo y han de sucedernos bien las cosas; porque no
+              es posible que el mal ni el bien sean durables, y de aquí se sigue
+              que, habiendo durado mucho el mal, el bien está ya cerca.
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modelArtista5" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title fs-5">Núria Vila</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <img
+              src="https://placeholdpicsum.dev/photo/id/667/600/400"
+              alt="Núria Vila"
+              class="img-fluid rounded mb-3"
+            />
+            <p>
+              Y, viéndole don Quijote de aquella manera, con muestras de tanta
+              tristeza, le dijo: Sábete, Sancho, que no es un hombre más que
+              otro si no hace más que otro.
+            </p>
+            <p>
+              Todas estas borrascas que nos suceden son señales de que presto ha
+              de serenar el tiempo y han de sucedernos bien las cosas; porque no
+              es posible que el mal ni el bien sean durables, y de aquí se sigue
+              que, habiendo durado mucho el mal, el bien está ya cerca.
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modelArtista6" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title fs-5">Pau Roca</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <img
+              src="https://placeholdpicsum.dev/photo/id/663/600/400"
+              alt="Pau Roca"
+              class="img-fluid rounded mb-3"
+            />
+            <p>
+              Y, viéndole don Quijote de aquella manera, con muestras de tanta
+              tristeza, le dijo: Sábete, Sancho, que no es un hombre más que
+              otro si no hace más que otro.
+            </p>
+            <p>
+              Todas estas borrascas que nos suceden son señales de que presto ha
+              de serenar el tiempo y han de sucedernos bien las cosas; porque no
+              es posible que el mal ni el bien sean durables, y de aquí se sigue
+              que, habiendo durado mucho el mal, el bien está ya cerca.
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <include src="./views/footer.html"></include>
     <script type="module" src="./assets/scripts/main.js"></script>
     <!-- do not remove this line! -->

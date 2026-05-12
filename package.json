@@ -53,6 +53,7 @@
   "dependencies": {
     "@fontsource/ubuntu": "^5.2.8",
     "@fortawesome/fontawesome-free": "^7.2.0",
+    "aos": "^2.3.4",
     "bootstrap": "^5.3.8"
   }
 }
