@@ -2,4 +2,15 @@
   # Bootstrap variable overrides
 \*------------------------------------*/
 
+// Typography
 $font-family-sans-serif: "Ubuntu", system-ui, sans-serif;
+
+// Colors (Sabero coat of arms palette)
+$primary:   #0071bc; // $sabero-blue
+$secondary: #008f4c; // $sabero-green
+$warning:   #eac102; // $sabero-gold
+$danger:    #ed1c24; // $sabero-red
+
+// Border radius
+$border-radius: 0.5rem;
+$border-radius-pill: 2rem;

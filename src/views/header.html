@@ -1,16 +1,26 @@
-<header>
+<header class="site-header">
   <include src="./components/logo.html"></include>
-  <nav class="header__nav">
-    <ul class="header__nav-list">
-      <li class="header__nav-item">
-        <a class="header__nav-link" href="./article.html">La jornada</a>
-      </li>
-      <li class="header__nav-item">
-        <a class="header__nav-link" href="./speakers.html">Artesanos</a>
-      </li>
-      <li class="header__nav-item">
-        <a class="header__nav-link" href="./inscription.html">Inscríbete</a>
-      </li>
-    </ul>
+  <nav class="navbar navbar-expand-md navbar-dark">
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#mainNav"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="./article.html">La jornada</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./speakers.html">Artesanos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./inscription.html">Inscríbete</a>
+        </li>
+      </ul>
+    </div>
   </nav>
 </header>

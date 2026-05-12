@@ -4,34 +4,54 @@
 
 @use "../abstracts/variables" as *;
 
-header {
+.site-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: transparent;
+  container-type: inline-size;
+  container-name: site-header;
+
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  border-bottom: 3px solid $sabero-gold;
-  padding: 1.5rem 7rem;
-  font-weight: bolder;
+  justify-content: space-between;
+  padding: 0.75rem 2rem;
 
-  .header__nav {
-    display: flex;
-    align-items: center;
-    gap: 3rem;
+  .navbar {
+    flex: 1;
+  }
 
-    &-list {
-      display: flex;
-      flex-direction: row;
-      gap: 3rem;
-      list-style: none;
+  .nav-link {
+    color: $sabero-gray;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: color 0.2s;
+
+    &:hover,
+    &:focus {
+      color: $sabero-gold;
     }
+  }
 
-    &-link {
-      color: $sabero-black;
-      text-decoration: none;
-      font-size: 1.5rem;
+  // Menú colapsado en móvil: fondo oscuro para legibilidad
+  .navbar-collapse.show,
+  .navbar-collapse.collapsing {
+    background-color: oklch(10% 0.04 250 / 0.9);
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    margin-top: 0.25rem;
+  }
+}
 
-      &:hover {
-        color: $sabero-blue;
-      }
-    }
+@container site-header (width < 420px) {
+  .site-header {
+    padding: 0.5rem 1rem;
+  }
+
+  .logo {
+    height: 44px;
+    width: 44px;
   }
 }
