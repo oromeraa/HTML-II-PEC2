@@ -6,30 +6,40 @@
     <meta name="viewport" content="width=device-width" />
     <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss" />
     <!-- do not remove this line! -->
-    <title>UOC Boilerplate</title>
+    <title>Jornadas de Artesanía de Sabero</title>
   </head>
-  <body>
-    <div class="uoc-container">
-      <picture>
-        <source
-          srcset="./assets/images/logo.png?as=webp&width=350"
-          type="image/webp"
-        />
+  <body class="home">
+    <include src="./views/header.html"></include>
+
+    <main class="poster">
+      <div class="poster__image">
         <img
-          src="./assets/images/logo.png?width=350"
-          alt="Universitat Oberta de Catalunya"
-          class="uoc-logo"
+          src="./assets/images/home-market.jpeg"
+          alt="Portada Jornadas de Artesanía de Sabero"
+          class="poster__img"
         />
-      </picture>
-      <h1 class="uoc-title">Hello, UOC!</h1>
-      <p>
-        This is a starter template for the Advanced HTML and CSS Tools courses
-        from the Master's Program in Multimedia Applications and the Master's
-        Program in Web App and Website Development at the Universitat Oberta de
-        Catalunya.
-      </p>
-    </div>
+      </div>
+
+      <div class="poster__content">
+        <h1 class="poster__title">Jornadas de<br />Artesanía de Sabero</h1>
+        <p class="poster__subtitle">
+          Tres días de talleres, charlas y creación artesanal.<br />
+          Del 15 al 17 de junio · Sabero, León
+        </p>
+      </div>
+    </main>
+
+    <!-- <main>
+      <img
+        src="./assets/images/home-market.jpeg"
+        alt="Portada Jornadas de Artesanía de Sabero"
+      />
+      <h1>Bienvenidos a las Jornadas de Artesanía de Sabero</h1>
+      <h2>Descubre la riqueza de la artesanía local</h2>
+    </main> -->
+
     <include src="./views/footer.html"></include>
+
     <script type="module" src="./assets/scripts/main.js"></script>
     <!-- do not remove this line! -->
   </body>

@@ -1,0 +1,46 @@
+<!doctype html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss" />
+    <!-- do not remove this line! -->
+    <title>Jornadas de Artesanía de Sabero</title>
+  </head>
+  <body>
+    <include src="./views/header.html"></include>
+    <main>
+      <h1>Inscríbete en las Jornadas de Artesanía de Sabero</h1>
+      <p>
+        ¡No pierdas la oportunidad de participar en este evento único! Rellena
+        el siguiente formulario para inscribirte en las Jornadas de Artesanía de
+        Sabero y asegurar tu lugar en esta celebración de la artesanía local.
+      </p>
+      <form name="contact" method="POST" data-netlify="true">
+        <p>
+          <label for="name">Nombre:</label><br />
+          <input type="text" id="name" name="name" required />
+        </p>
+        <p>
+          <label for="phone">Teléfono:</label><br />
+          <input type="tel" id="phone" name="phone" />
+        </p>
+        <p>
+          <label for="email">Correo electrónico:</label><br />
+          <input type="email" id="email" name="email" required />
+        </p>
+        <p>
+          <label for="message">Observaciones:</label><br />
+          <textarea id="message" name="message" rows="4"></textarea>
+        </p>
+        <p>
+          <button type="submit">Inscribirse</button>
+        </p>
+      </form>
+    </main>
+    <include src="./views/footer.html"></include>
+    <script type="module" src="./assets/scripts/main.js"></script>
+    <!-- do not remove this line! -->
+  </body>
+</html>

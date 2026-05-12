@@ -3,18 +3,37 @@
  * Do not include SCSS code in this file.
  */
 
-/**
- * Import dependencies
- */
-@use "dependencies";
+@layer reset, bootstrap, base, views, components, pages, utilities;
 
-/**
- * Import layouts
- * It's a best practice to use a different partial for each page
- */
+@layer reset {
+  @import "base/reset";
+}
 
-@use "layouts/home";
+@layer bootstrap {
+  @import "abstracts/bootstrap-overwrites";
+  @import "/node_modules/bootstrap/scss/bootstrap";
+}
 
-/**
- * Do NOT include anything else in this file!
- */
+@layer base {
+  @import "base/base";
+}
+
+@layer views {
+  @import "views/header";
+  @import "views/footer";
+}
+
+@layer components {
+  @import "components/logo";
+}
+
+@layer pages {
+  @import "pages/home";
+  @import "pages/article";
+  @import "pages/speakers";
+  @import "pages/inscription";
+}
+
+// @layer utilities {
+//   // aquí van los helpers
+// }

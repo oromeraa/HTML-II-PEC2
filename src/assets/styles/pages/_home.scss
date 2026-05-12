@@ -1,0 +1,28 @@
+/*------------------------------------*\
+  # Home page styles
+\*------------------------------------*/
+
+@use "../abstracts/variables" as *;
+
+.home {
+  max-height: 100vh;
+
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+
+    .header__nav-link {
+      color: $sabero-gray;
+    }
+  }
+
+  main {
+    // Fallback
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+}

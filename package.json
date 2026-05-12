@@ -9,13 +9,19 @@
     "clean": "rimraf dist .cache .cache-loader .parcel-cache",
     "dev": "npm-run-all clean parcel:serve",
     "build": "npm-run-all clean parcel:build",
-    "test": "echo 'Everything is working as expected ✅\nStart working on your project by running \\033[1mnpm run dev\\033[0m'"
+    "test": "echo 'Everything is working as expected ✅\nStart working on your project by running \\033[1mnpm run dev\\033[0m'",
+    "stylelint": "stylelint src/**/*.scss"
   },
+  "source": [
+    "src/index.html",
+    "src/speakers.html",
+    "src/article.html",
+    "src/inscription.html"
+  ],
   "targets": {
     "web": {
       "context": "browser",
       "publicUrl": "./",
-      "source": "src/index.html",
       "engines": {
         "browsers": "last 2 versions, > 0.5%, not dead"
       }
@@ -43,5 +49,10 @@
     "posthtml-include": "^2.0.1",
     "rimraf": "^6.1.2",
     "sharp": "^0.33.5"
+  },
+  "dependencies": {
+    "@fontsource/ubuntu": "^5.2.8",
+    "@fortawesome/fontawesome-free": "^7.2.0",
+    "bootstrap": "^5.3.8"
   }
 }

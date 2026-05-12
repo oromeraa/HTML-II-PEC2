@@ -1,0 +1,14 @@
+/*------------------------------------*\
+  # Common styles
+\*------------------------------------*/
+
+@use "../abstracts/variables" as *;
+
+:root {
+  font-family: $font-family-ubuntu;
+}
+
+body {
+  color: $sabero-black;
+  background-color: $sabero-gray;
+}
