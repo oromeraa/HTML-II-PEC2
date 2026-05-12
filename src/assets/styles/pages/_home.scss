@@ -10,8 +10,23 @@
   flex-direction: column;
   overflow: hidden;
 
-  > header  { flex-shrink: 0; }
-  > footer  { flex-shrink: 0; }
+  > header {
+    flex-shrink: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background: transparent;
+    border: none;
+
+    .nav-link {
+      color: $sabero-gray;
+    }
+  }
+  > footer {
+    flex-shrink: 0;
+  }
 }
 
 .poster {
@@ -20,7 +35,7 @@
   position: relative;
   overflow: hidden;
 
-  // Fallback sin grid: flex, imagen como fondo absoluto, contenido abajo
+  // Fallback sin grid
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -36,9 +51,8 @@
       [content-start] minmax(0, 60ch) [content-end]
       [full-end] minmax(1.5rem, 1fr);
 
-    grid-template-rows:
-      1fr       // empuja el contenido hacia abajo
-      auto;     // contenido
+    grid-template-rows: 1fr // empuja el contenido hacia abajo
+      auto; // contenido
   }
 
   // ── Imagen de fondo ───────────────────────────────────────────────────────
@@ -49,7 +63,7 @@
     z-index: 0;
 
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       inset: 0;
       background: linear-gradient(

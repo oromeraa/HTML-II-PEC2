@@ -5,26 +5,19 @@
 @use "../abstracts/variables" as *;
 
 .site-header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 100;
-  background: transparent;
   container-type: inline-size;
   container-name: site-header;
 
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0.75rem 2rem;
+  border-bottom: 2px solid $sabero-gold;
 
   .navbar {
-    flex: 1;
+    width: 80%;
+    margin: 0 auto;
+    padding: 1rem 0;
   }
 
   .nav-link {
-    color: $sabero-gray;
+    color: $sabero-black;
     font-weight: 600;
     font-size: 1rem;
     transition: color 0.2s;
@@ -35,19 +28,25 @@
     }
   }
 
-  // Menú colapsado en móvil: fondo oscuro para legibilidad
+  button {
+    background-color: $sabero-gray;
+    color: $sabero-gray;
+  }
+
+  // Menú colapsado en telefono
   .navbar-collapse.show,
   .navbar-collapse.collapsing {
     background-color: oklch(10% 0.04 250 / 0.9);
     border-radius: 0.5rem;
-    padding: 0.5rem 1rem;
+    padding: 1rem 1rem;
     margin-top: 0.25rem;
+    color: $sabero-gray;
   }
 }
 
-@container site-header (width < 420px) {
-  .site-header {
-    padding: 0.5rem 1rem;
+@container site-header (width < #{$mqMinTablet}) {
+  .site-header .navbar {
+    padding: 1rem 1rem;
   }
 
   .logo {

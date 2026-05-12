@@ -25,9 +25,15 @@
     align-items: center;
     border-top: 3px solid $sabero-gold;
 
-    .logo          { justify-self: start; }
-    .site-footer__nav { justify-self: center; }
-    .social-links  { justify-self: end; }
+    .logo {
+      justify-self: start;
+    }
+    .site-footer__nav {
+      justify-self: center;
+    }
+    .social-links {
+      justify-self: end;
+    }
   }
 
   &__nav .nav__list {
@@ -47,7 +53,8 @@
     font-weight: 600;
     transition: color 0.2s;
 
-    &:hover {
+    &:hover,
+    &:focus {
       color: $sabero-green;
     }
   }
@@ -61,7 +68,8 @@
       font-size: 1.25rem;
       transition: color 0.2s;
 
-      &:hover {
+      &:hover,
+      &:focus {
         color: $sabero-green;
       }
     }
@@ -75,8 +83,14 @@
     gap: 0.75rem;
     text-align: center;
 
-    .logo          { justify-self: center; }
-    .site-footer__nav { justify-self: center; }
-    .social-links  { justify-self: center; }
+    .logo {
+      justify-self: center;
+    }
+    .site-footer__nav {
+      justify-self: center;
+    }
+    .social-links {
+      justify-self: center;
+    }
   }
 }
