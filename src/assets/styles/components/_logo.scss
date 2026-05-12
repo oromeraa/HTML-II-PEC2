@@ -13,18 +13,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: border-color 0.2s, transform 0.2s;
 
-  &__link {
+  &__image {
+    width: 80%;
+    height: 80%;
     object-fit: contain;
-    height: 50%;
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
 
-  &__img {
-    height: 100%;
-    width: 100%;
+  &:hover {
+    border: 3px solid $sabero-green;
+    transform: scale(1.2);
   }
 }

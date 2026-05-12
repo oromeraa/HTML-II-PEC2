@@ -1,3 +1,9 @@
 /*------------------------------------*\
   # Functions
 \*------------------------------------*/
+
+// Returns the flex-basis value for a card in a multi-column flex grid.
+// Usage: flex: 1 1 card-basis(3, 1.5rem);
+@function card-basis($columns, $gap) {
+  @return calc(#{100% / $columns} - #{$gap * ($columns - 1) / $columns});
+}

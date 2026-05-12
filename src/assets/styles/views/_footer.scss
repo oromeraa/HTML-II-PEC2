@@ -4,33 +4,79 @@
 
 @use "../abstracts/variables" as *;
 
-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.5rem 0;
-  margin: 15rem 7rem 0 7rem;
-  border-top: 3px solid $sabero-gold;
-  font-weight: bolder;
+.site-footer {
+  container-type: inline-size;
+  container-name: site-footer;
 
-  a {
-    color: $sabero-black;
-    text-decoration: none;
-    font-size: 1.5rem;
+  padding-top: 4rem;
 
-    &:hover {
-      color: $sabero-blue;
-    }
+  &__contact {
+    text-align: center;
+    font-size: 0.9rem;
+    color: $sabero-blue;
   }
 
-  nav ul {
+  &__bar {
+    width: 80%;
+    margin: 0 auto;
+    padding: 1rem 0;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr; // para centrar el nav
+    align-items: center;
+    border-top: 3px solid $sabero-gold;
+
+    .logo          { justify-self: start; }
+    .site-footer__nav { justify-self: center; }
+    .social-links  { justify-self: end; }
+  }
+
+  &__nav .nav__list {
     display: flex;
-    gap: 3rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.25rem;
     list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .nav__link {
+    color: $sabero-black;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: color 0.2s;
+
+    &:hover {
+      color: $sabero-green;
+    }
   }
 
   .social-links {
     display: flex;
     gap: 1rem;
+
+    a {
+      color: $sabero-black;
+      font-size: 1.25rem;
+      transition: color 0.2s;
+
+      &:hover {
+        color: $sabero-green;
+      }
+    }
+  }
+}
+
+@container site-footer (width < #{$mqMinTablet}) {
+  .site-footer__bar {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 0.75rem;
+    text-align: center;
+
+    .logo          { justify-self: center; }
+    .site-footer__nav { justify-self: center; }
+    .social-links  { justify-self: center; }
   }
 }

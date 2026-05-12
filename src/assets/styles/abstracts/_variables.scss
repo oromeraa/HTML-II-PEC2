@@ -49,6 +49,9 @@ $tile-regular: 1fr;
 $tile-hover: 1.3fr;
 $tile-reduced: 0.5fr;
 
-// navbar animations
-$elastic-hook: cubic-bezier(0.175, 0.885, 0.32, 1.5); // float to fix
-$elastic-unhook: cubic-bezier(0.68, -0.8, 0.2, 2.5); // fix to float
+// Display typography (used in poster title and section headings)
+$font-display: $font-leonesa;
+$font-display-modern: $font-leonesaModern;
+
+// Poster card dimensions
+$poster-radius: 0.75rem;
