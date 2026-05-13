@@ -41,10 +41,25 @@
   .navbar-collapse.show,
   .navbar-collapse.collapsing {
     padding: 1rem 1rem;
-    margin-top: .25rem;
+    margin-top: 1rem;
     color: $sabero-gray;
-    background-color: rgba($sabero-black, .9);
+    background-color: $navbar-bg;
     border-radius: .5rem;
+  }
+
+  // :has() — el header se vuelve opaco cuando el menú móvil está abierto
+  // evita que el contenido de debajo se vea a través del fondo transparente
+  &:has(.navbar-collapse.show) {
+    background-color: $navbar-bg;
+
+    .nav-link {
+      color: $sabero-gray;
+
+      &:hover,
+      &:focus {
+        color: $sabero-green;
+      }
+    }
   }
 }
 

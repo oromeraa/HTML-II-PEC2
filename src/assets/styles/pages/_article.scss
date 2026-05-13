@@ -65,6 +65,14 @@
     &-content {
       max-width: 900px;
 
+      :is(p, ol, figure) {
+        margin-bottom: 1.5rem;
+      }
+
+      :is(p, li) {
+        line-height: 1.7;
+      }
+
       .article__intro {
         display: grid;
         grid-template-columns: 1fr 2fr;

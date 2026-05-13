@@ -1,9 +1,9 @@
 <!doctype html>
 
-<html lang="es">
+<html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width" />
     <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss" />
     <!-- do not remove this line! -->
     <title>Inscríbete — Jornadas de Artesanía de Sabero</title>
@@ -21,14 +21,14 @@
         </div>
 
         <form
-          name="inscripcio-tallers"
+          name="inscription-form"
           method="POST"
+          action="/"
           data-netlify="true"
           netlify-honeypot="bot-field"
           class="inscription-form"
-          novalidate
         >
-          <input type="hidden" name="form-name" value="inscripcio-tallers" />
+          <input type="hidden" name="form-name" value="inscription-form" />
 
           <div class="mb-3">
             <label for="nombre" class="form-label">Nombre completo *</label>
@@ -94,7 +94,7 @@
           </div>
 
           <button type="submit" class="btn btn-primary">
-            <i class="fa-solid fa-paper-plane"></i> Enviar inscripción
+            Enviar inscripción
           </button>
         </form>
       </div>

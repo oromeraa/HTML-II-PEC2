@@ -56,6 +56,11 @@ body.inscription {
     padding: 1.25rem;
   }
 
+  &:has(:invalid) {
+    border-color: oklch(55% .2 20);
+    box-shadow: 0 0 0 3px oklch(55% .2 20 / .15);
+  }
+
   &.was-validated .form-control:valid {
     border-color: oklch(55% .15 145);
   }
