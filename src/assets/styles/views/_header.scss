@@ -12,8 +12,8 @@
 
   .navbar {
     width: 80%;
-    margin: 0 auto;
     padding: 1rem 0;
+    margin: 0 auto;
 
     &-nav {
       gap: 2rem;
@@ -21,9 +21,9 @@
   }
 
   .nav-link {
-    color: $sabero-black;
-    font-weight: 600;
     font-size: 1.5rem;
+    font-weight: 600;
+    color: $sabero-black;
     transition: color 0.2s;
 
     &:hover,
@@ -33,18 +33,18 @@
   }
 
   button {
-    background-color: $sabero-gray;
     color: $sabero-gray;
+    background-color: $sabero-gray;
   }
 
   // Menú colapsado en telefono
   .navbar-collapse.show,
   .navbar-collapse.collapsing {
-    background-color: oklch(10% 0.04 250 / 0.9);
-    border-radius: 0.5rem;
     padding: 1rem 1rem;
     margin-top: 0.25rem;
     color: $sabero-gray;
+    background-color: rgba($sabero-black, 0.9);
+    border-radius: 0.5rem;
   }
 }
 
@@ -54,7 +54,7 @@
   }
 
   .logo {
-    height: 44px;
     width: 44px;
+    height: 44px;
   }
 }

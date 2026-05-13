@@ -5,17 +5,17 @@
 @use "../abstracts/variables" as *;
 
 .logo {
-  height: 60px;
-  width: 60px;
-  background-color: $sabero-gray;
-  border-radius: 50%;
-  border: 2px solid $sabero-black;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 60px;
+  height: 60px;
+  background-color: $sabero-gray;
+  border: 2px solid $sabero-black;
+  border-radius: 50%;
   transition:
     border-color 0.2s,
     transform 0.2s;
+  justify-content: center;
+  align-items: center;
 
   &__image {
     width: 80%;

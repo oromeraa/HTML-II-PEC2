@@ -44,24 +44,23 @@ $mqMinTablet: 768px;
 $mqMinDesktop: 1024px;
 $mqMaxDesktop: 1440px;
 
+// Container query breakpoints
+$cqSmall: 600px;
+$cqMedium: 900px;
+$cqCardNarrow: 240px;
+$cqCardWide: 400px;
+
 // Tile sizes
 $tile-regular: 1fr;
 $tile-hover: 1.3fr;
 $tile-reduced: 0.5fr;
 
-// Custom typography
-$font-display: $font-leonesa;
-$font-display-modern: $font-leonesaModern;
-
-// Poster card dimensions
 $poster-radius: 0.75rem;
 
-// Semantic aliases
 $color-primary: $sabero-green;
 $border-radius-card: $radius;
 
-// Grid
 $grid-gap: 1.5rem;
 
-// Surface color (neutral background for cards and sections)
-$color-surface: #fff;
+// Text colors
+$color-gray-mid: color.mix($sabero-black, $sabero-gray, 60%);

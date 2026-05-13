@@ -5,53 +5,47 @@
 @use "../abstracts/variables" as *;
 @use "../abstracts/functions" as *;
 
-// ── Layout de página ─────────────────────────────────────────────────────────
-
 body.speakers {
   display: flex;
   flex-direction: column;
   min-height: 100dvh;
 }
 
-// ── Página de ponentes ────────────────────────────────────────────────────────
-
 .speakers-page {
   flex: 1;
   padding: 3rem 0 4rem;
 
   &__header {
-    text-align: center;
     margin-bottom: 3rem;
+    text-align: center;
   }
 
   &__title {
-    font-family: $font-display;
+    margin-bottom: 0.5rem;
+    font-family: $font-leonesa;
     font-size: clamp(2rem, 5vw, 3.5rem);
     color: $color-primary;
-    margin-bottom: 0.5rem;
   }
 
   &__intro {
     max-width: 60ch;
     margin: 0 auto;
-    color: oklch(40% 0.03 250);
     font-size: 1.1rem;
+    color: $color-gray-mid;
   }
 
   &__note {
-    text-align: center;
     margin-top: 2.5rem;
-    color: oklch(50% 0.03 250);
     font-size: 1rem;
+    color: $color-gray-mid;
+    text-align: center;
 
     i {
-      color: $color-primary;
       margin-right: 0.3rem;
+      color: $color-primary;
     }
   }
 }
-
-// ── Retícula flex (NO Bootstrap .row/.col) ────────────────────────────────────
 
 .speakers-grid {
   container-type: inline-size;
@@ -67,34 +61,29 @@ body.speakers {
   }
 }
 
-// ── Tarjeta de ponente ────────────────────────────────────────────────────────
-
 .speaker-card {
-  container-type: inline-size;
-  container-name: speaker-card;
-
   display: flex;
-  flex-direction: column;
-  background-color: $card-bg;
-  border: 1px solid oklch(90% 0.02 250);
-  border-radius: $border-radius-card;
   overflow: hidden;
+  background-color: $card-bg;
+  border: 1px solid $sabero-gray;
+  border-radius: $border-radius-card;
   transition:
     box-shadow 0.2s ease,
     transform 0.2s ease;
+  container-type: inline-size;
+  container-name: speaker-card;
+  flex-direction: column;
 
   &:hover {
-    box-shadow: 0 8px 24px oklch(50% 0.08 150 / 0.2);
     transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba($sabero-green, 0.2);
   }
-
-  // ── Figura / foto ─────────────────────────────────────────────────────────
 
   &__figure {
     margin: 0;
     aspect-ratio: 1 / 1;
     overflow: hidden;
-    background-color: oklch(93% 0.03 90);
+    background-color: $sabero-gray;
   }
 
   &__photo {
@@ -109,8 +98,6 @@ body.speakers {
     }
   }
 
-  // ── Cuerpo de texto ───────────────────────────────────────────────────────
-
   &__body {
     display: flex;
     flex-direction: column;
@@ -120,10 +107,10 @@ body.speakers {
   }
 
   &__name {
-    font-family: $font-display;
-    font-size: 1.2rem;
-    color: oklch(20% 0.04 250);
     margin: 0;
+    font-family: $font-leonesa;
+    font-size: 1.2rem;
+    color: $sabero-black;
   }
 
   &__badge {
@@ -131,11 +118,11 @@ body.speakers {
   }
 
   &__bio {
-    font-size: 1rem;
-    color: oklch(40% 0.03 250);
-    line-height: 1.6;
-    flex: 1;
     margin: 0;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: $color-gray-mid;
+    flex: 1;
   }
 
   &__btn {
@@ -143,10 +130,7 @@ body.speakers {
     margin-top: auto;
   }
 
-  // ── Container queries internas de la card ─────────────────────────────────
-
-  // Card muy estrecha: simplificar imagen
-  @container speaker-card (width < 240px) {
+  @container speaker-card (width < #{$cqCardNarrow}) {
     .speaker-card__figure {
       aspect-ratio: 16 / 9;
     }
@@ -160,8 +144,7 @@ body.speakers {
     }
   }
 
-  // Card ancha: ajustar proporciones cuando el layout es horizontal
-  @container speaker-card (width >= 400px) {
+  @container speaker-card (width >= #{$cqCardWide}) {
     .speaker-card__figure {
       width: 35%;
       aspect-ratio: auto;
@@ -174,21 +157,19 @@ body.speakers {
   }
 }
 
-// ── Container queries del grid ────────────────────────────────────────────────
-
-@container speakers-grid (width < 600px) {
+@container speakers-grid (width < #{$cqSmall}) {
   .speakers-grid .speaker-card {
     flex: 1 1 100%;
   }
 }
 
-@container speakers-grid (600px <= width < 900px) {
+@container speakers-grid (#{$cqSmall} <= width < #{$cqMedium}) {
   .speakers-grid .speaker-card {
     flex: 1 1 card-basis(2, $grid-gap);
   }
 }
 
-@container speakers-grid (width >= 900px) {
+@container speakers-grid (width >= #{$cqMedium}) {
   .speakers-grid .speaker-card {
     flex: 1 1 card-basis(3, $grid-gap);
     flex-direction: row-reverse;
