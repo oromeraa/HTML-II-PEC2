@@ -167,6 +167,7 @@
       "set-link-source",
       "unicode-bidi",
       "speak"
-    ]
+    ],
+    "no-invalid-position-at-import-rule": null
   }
 }
