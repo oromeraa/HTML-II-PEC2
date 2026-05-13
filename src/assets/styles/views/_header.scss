@@ -24,7 +24,7 @@
     font-size: 1.5rem;
     font-weight: 600;
     color: $sabero-black;
-    transition: color 0.2s;
+    transition: color .2s;
 
     &:hover,
     &:focus {
@@ -41,10 +41,10 @@
   .navbar-collapse.show,
   .navbar-collapse.collapsing {
     padding: 1rem 1rem;
-    margin-top: 0.25rem;
+    margin-top: .25rem;
     color: $sabero-gray;
-    background-color: rgba($sabero-black, 0.9);
-    border-radius: 0.5rem;
+    background-color: rgba($sabero-black, .9);
+    border-radius: .5rem;
   }
 }
 

@@ -46,10 +46,7 @@
     display: grid;
     height: 100%; // hereda el espacio del flex item
 
-    grid-template-columns:
-      [full-start] minmax(1.5rem, 1fr)
-      [content-start] minmax(0, 60ch) [content-end]
-      [full-end] minmax(1.5rem, 1fr);
+    grid-template-columns: [full-start] minmax(1.5rem, 1fr) [content-start] minmax(0, 60ch) [content-end] [full-end] minmax(1.5rem, 1fr);
 
     grid-template-rows: 1fr // empuja el contenido hacia abajo
       auto; // contenido
@@ -64,8 +61,8 @@
       position: absolute;
       background: linear-gradient(
         165deg,
-        rgba($sabero-black, 0.1) 0%,
-        rgba($sabero-black, 0.75) 65%
+        rgba($sabero-black, .1) 0%,
+        rgba($sabero-black, .75) 65%
       );
       content: "";
       inset: 0;
@@ -92,7 +89,7 @@
   }
 
   &__title {
-    margin-bottom: 0.75rem;
+    margin-bottom: .75rem;
     font-family: $font-leonesa;
     font-size: clamp(2.5rem, 8cqi, 5rem);
     font-weight: 900;

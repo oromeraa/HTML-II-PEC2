@@ -21,7 +21,7 @@ body.speakers {
   }
 
   &__title {
-    margin-bottom: 0.5rem;
+    margin-bottom: .5rem;
     font-family: $font-leonesa;
     font-size: clamp(2rem, 5vw, 3.5rem);
     color: $color-primary;
@@ -41,7 +41,7 @@ body.speakers {
     text-align: center;
 
     i {
-      margin-right: 0.3rem;
+      margin-right: .3rem;
       color: $color-primary;
     }
   }
@@ -67,16 +67,14 @@ body.speakers {
   background-color: $card-bg;
   border: 1px solid $sabero-gray;
   border-radius: $border-radius-card;
-  transition:
-    box-shadow 0.2s ease,
-    transform 0.2s ease;
+  transition: box-shadow .2s ease, transform .2s ease;
   container-type: inline-size;
   container-name: speaker-card;
   flex-direction: column;
 
   &:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 24px rgba($sabero-green, 0.2);
+    box-shadow: 0 8px 24px rgba($sabero-green, .2);
   }
 
   &__figure {
@@ -91,7 +89,7 @@ body.speakers {
     height: 100%;
     object-fit: cover;
     object-position: top center;
-    transition: transform 0.3s ease;
+    transition: transform .3s ease;
 
     .speaker-card:hover & {
       transform: scale(1.05);
@@ -101,7 +99,7 @@ body.speakers {
   &__body {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: .5rem;
     padding: 1.25rem;
     flex: 1;
   }

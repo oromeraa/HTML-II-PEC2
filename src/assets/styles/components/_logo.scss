@@ -11,9 +11,7 @@
   background-color: $sabero-gray;
   border: 2px solid $sabero-black;
   border-radius: 50%;
-  transition:
-    border-color 0.2s,
-    transform 0.2s;
+  transition: border-color .2s, transform .2s;
   justify-content: center;
   align-items: center;
 
