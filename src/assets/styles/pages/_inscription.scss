@@ -1,0 +1,70 @@
+/*------------------------------------*\
+  # Inscription page
+\*------------------------------------*/
+
+@use "../abstracts/variables" as *;
+
+// ── Layout de página ──────────────────────────────────────────────────────────
+
+body.inscription {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+}
+
+.inscription-page {
+  flex: 1;
+  container-type: inline-size;
+  container-name: inscription-page;
+  padding: 3rem 0 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  .container {
+    width: 100%;
+  }
+
+  &__header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  &__title {
+    font-family: $font-display;
+    font-size: clamp(2rem, 5cqi, 3rem);
+    color: $color-primary;
+    margin-bottom: 0.5rem;
+  }
+
+  &__intro {
+    color: oklch(40% 0.03 250);
+    max-width: 55ch;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
+// ── Formulario ────────────────────────────────────────────────────────────────
+
+.inscription-form {
+  max-width: 640px;
+  margin: 0 auto;
+  background-color: color-mix(in oklch, $color-surface 94%, $color-primary);
+  padding: 2rem;
+  border-radius: $border-radius-card;
+  border: 1px solid oklch(90% 0.02 250);
+
+  @container inscription-page (width < 500px) {
+    padding: 1.25rem;
+  }
+
+  &.was-validated .form-control:valid {
+    border-color: oklch(55% 0.15 145);
+  }
+
+  &.was-validated .form-control:invalid {
+    border-color: oklch(55% 0.2 20);
+  }
+}
